@@ -1,0 +1,37 @@
+{
+    "explorerSort.rules": [
+        {
+            "name": "Auto-generated for **/*",
+            "pathPattern": "**/*",
+            "priorities": [
+                {
+                    "condition": "name === 'Caclulator'",
+                    "priority": 0,
+                    "referenceFile": "Chairopink_System",
+                    "offset": -1
+                }
+            ]
+        }
+    ],
+    "customFileOrder.rules": {
+        "c:\\Users\\enzop\\OneDrive\\Desktop\\KENZO\\COLLEGE\\JAVA SCRIPT": {
+            "order": [
+                ".vscode",
+                "5INPUT",
+                "Caclulator",
+                "Chairopink_System",
+                "Dataytypes",
+                "FunctionHTMLDemo",
+                "JSSyntax",
+                "MiniCalc",
+                "New folder",
+                "Operators",
+                "StringManipulation",
+                "stringmanipulationjs",
+                "StudentRegistrationSystem",
+                "WhereTo-Output"
+            ],
+            "type": "manual"
+        }
+    }
+}
