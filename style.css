@@ -5,16 +5,17 @@ body {
     background-color: #fff0f5;
     line-height: 26px;
 }
-
-.logo {
-    margin-bottom: -100px;
-}
-
 .header {
     width: 100%;
     height: 120px;
     background: rgb(35, 21, 18);
-    position: sticky;
+    position: right;
+}
+.logo {
+    width: 100%;
+    height: 120px;
+    background: rgb(35, 21, 18);
+    position: left;
 }
 
 ul {
