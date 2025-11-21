@@ -16,6 +16,7 @@ body {
     height: 120px;
     background: rgb(35, 21, 18);
     position: left;
+    margin-bottom: -115px;
 }
 
 ul {
@@ -27,7 +28,7 @@ ul {
 
 ul li {
     list-style: none;
-    margin-right: 100px;
+    margin-right: 110px;
     margin-top: 32px;
     font-size: 20px;
 }
@@ -40,12 +41,63 @@ ul li a {
 }
 
 ul li a:hover {
-    color: rgb(140, 51, 51);
+    color: rgb(202, 68, 68);
 }
 
-.buttons{
-    margin-top: 200px;
+.buttons button {
     border: none;
     background: none;
     cursor: pointer;
+    margin: 10px;
+    align-items: 30px 40px;
+    padding: 20px 55px;
+    margin-top: 110px;
+    margin-left: 50px;
 }
+
+.buttons img {
+    width: 300px;
+    height: 300px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    margin: 40px 40px;
+    margin-top: -410px;
+}
+
+.gallery img {
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.footer {
+    background: rgb(35, 21, 18);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.footer ul li {
+    margin: 0 15px;
+}
+
+.footer ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.footer p {
+    margin: 20px 0;
+}
+
