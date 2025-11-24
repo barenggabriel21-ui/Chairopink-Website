@@ -213,12 +213,14 @@ ul li a:hover {
     justify-content: flex-end;
     gap: 15px;
 }
+
 .social_media img {
     width: 22px;
     height: 22px;
     filter: brightness(0) invert(1); /* White icons */
     cursor: pointer;
     transition: filter 0.3s ease;
+
 }
 
 .footer_logo {
@@ -226,3 +228,30 @@ ul li a:hover {
     height: auto;
     object-fit: contain;
 }
+
+/* Booking Design */
+
+.booking-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.booking-container {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    color: #000000;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+}
+

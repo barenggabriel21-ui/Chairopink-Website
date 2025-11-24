@@ -1,1 +1,204 @@
-fuckers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChairoPink Pet Salon — Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <div class="header">
+        <img src="images/CHAIRO_PINK_LOGO_(ORIGINAL).png" alt="chairopinkpetsalonlogo">
+    </div>
+
+    
+    <div class="logo">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="FAQs.html">FAQS</a></li>
+        </ul>
+    </div>
+
+    
+    <main class="booking-page">
+
+        <div class="booking-container">
+
+            <hr>
+
+            <h2>SELECT SERVICES</h2>
+
+            <hr>
+
+            <h3>DOG GROOMING PACKAGES</h3>
+
+            <div class="services">
+
+                <label><input type="radio" name="service" value="basic_dog_fg"> Full Groom + Basic Trim, Dry & Sanitary</label><br>
+                <label><input type="radio" name="service" value="dog_shaved_fg"> FG + Fully Shaved</label><br>
+
+                <select name="dog_size">
+                    <option value="small_550">SMALL (P550)</option>
+                    <option value="medium_750">MEDIUM (P750)</option>
+                    <option value="large_950">LARGE (P950)</option>
+                </select>
+
+                <br><br>
+
+                <label><input type="radio" name="service" value="body_head_shaved&style"> FG + Body Shaved + Head Style</label><br>
+                <label><input type="radio" name="service" value="semi_shaved"> FG + Semi-Shaved</label><br>
+                <label><input type="radio" name="service" value="dog_summer_cut"> FG + Summer Cut</label><br>
+
+                <select name="dog_size">
+                    <option value="small_600">SMALL (P600)</option>
+                    <option value="medium_850">MEDIUM (P850)</option>
+                    <option value="large_1000">LARGE (P1000)</option>
+                </select>
+
+                <br><br>
+
+                <label><input type="radio" name="service" value="dog_cut_body&Head"> FG + Summer Cut Body Round Head</label><br>
+
+                <select name="dog_size">
+                    <option value="small_650">SMALL (P650)</option>
+                    <option value="medium_800">MEDIUM (P800)</option>
+                    <option value="large_1250">LARGE (P1250)</option>
+                </select>
+
+                <br><br>
+
+                <h3>CAT GROOMING PACKAGE</h3>
+
+                <label><input type="radio" name="service" value="basic_cat_grooming"> Cat Grooming Basic</label>
+                <br>
+                <select name="size_cat_groom_basic">
+                    <option value="small_650">SMALL (P650)</option>
+                    <option value="large_750">LARGE (P750)</option>
+                </select>
+
+                <br><br>
+
+                <h3>ADD-ONS</h3>
+                <label><input type="checkbox" name="dematting" value="100"> Dematting (P100)</label><br>
+                <label><input type="checkbox" name="degreasing" value="100"> Extra Degreasing (P100)</label>
+
+                <br><br>
+
+                <hr>
+
+                <h2>DATE & TIME</h2>
+
+                <hr>
+
+                <label>Select Date:</label>
+                <input type="date" name="date">
+
+                <br><br>
+
+                <label>Select Time:</label>
+                <select name="time">
+                    <option value="08:30">8:30 AM</option>
+                    <option value="09:30">9:30 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="16:00">4:00 PM</option>
+                </select>
+
+            </div>
+
+            <br><br>
+            <hr>
+
+            
+            <div class="pet_info">
+                <h2>PET INFORMATION</h2>
+                <hr>
+
+                <input type="text" name="pet_name" placeholder="Pet Name"><br><br>
+                <input type="text" name="breed" placeholder="Breed"><br><br>
+                <input type="number" name="age" min="0" placeholder="Age"><br><br>
+
+                <label>Pet Gender: </label>
+                <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <br><br>
+
+                <label>Birthdate: </label>
+                <input type="date" name="birthdate"><br><br>
+
+                <input type="text" name="allergies" placeholder="Allergies"><br><br>
+
+                <label>Last Vaccination Date: </label>
+                <input type="date" name="last_vacc"><br><br>
+
+                <textarea name="health_history" rows="4" placeholder="Health History (injury, surgery, medications)"></textarea>
+            </div>
+
+            <br><br>
+            <hr>
+
+            
+            <div class="owner_info">
+                <h2>OWNER INFORMATION</h2>
+                <hr>
+
+                <input type="name" name="owner_name" placeholder="Owner Name"><br><br>
+                <input type="tel" name="contact_no" placeholder="Contact Number"><br><br>
+                <input type="email" name="email" placeholder="Email"><br><br>
+                <textarea name="address" rows="4" placeholder="Address"></textarea>
+            </div>
+
+            <br><br>
+            <hr>
+
+            
+            <div class="summary_receipt">
+                <h2>RECEIPT</h2>
+                <hr>
+                <button class="submit" onclick="confirm()">Confirm Booking</button>
+            </div>
+
+        </div> 
+
+    </main>
+
+    
+    <div class="footer">
+        <div class="footer_menu">
+            <div><a href="services.html">SERVICES</a></div>
+            <div><a href="about.html">ABOUT</a></div>
+            <div><a href="FAQs.html">FAQS</a></div>
+        </div>
+
+        <div class="footer_loc">
+            <p class="location">Location:</p>
+            <p class="location_details">
+                2nd Floor of Ederos Building.<br>
+                P. Oliveros Street. Circumferential Road.<br>
+                Barangay San Roque. Antipolo City, Rizal.<br>
+                Philippines.
+            </p>
+        </div>
+
+        <div class="footer_icon">
+            <div class="social_media">
+                <img src="images/fb.png" alt="">
+                <img src="images/tiktok.png" alt="">
+                <img src="images/instagram.png" alt="">
+            </div>
+            <img class="footer_logo" src="images/CHAIRO PINK LOGO (WHITE).png" alt="">
+        </div>
+
+    </div>
+
+</body>
+</html>
