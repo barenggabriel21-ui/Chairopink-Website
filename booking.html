@@ -25,23 +25,33 @@
     </div>
 
     
+
+
+
+
+
+
+
+
+    
     <main class="booking-page">
 
         <div class="booking-container">
 
             <hr>
 
-            <h2>SELECT SERVICES</h2>
+            <h1>SELECT SERVICES</h1 >
 
             <hr>
 
-            <h3>DOG GROOMING PACKAGES</h3>
+            <h2>DOG GROOMING PACKAGES</h2>
 
             <div class="services">
 
                 <label><input type="radio" name="service" value="basic_dog_fg"> Full Groom + Basic Trim, Dry & Sanitary</label><br>
                 <label><input type="radio" name="service" value="dog_shaved_fg"> FG + Fully Shaved</label><br>
 
+                <label for="dog_size">Pet Size:</label><br>
                 <select name="dog_size">
                     <option value="small_550">SMALL (P550)</option>
                     <option value="medium_750">MEDIUM (P750)</option>
@@ -54,6 +64,7 @@
                 <label><input type="radio" name="service" value="semi_shaved"> FG + Semi-Shaved</label><br>
                 <label><input type="radio" name="service" value="dog_summer_cut"> FG + Summer Cut</label><br>
 
+                <label for="dog_size">Pet Size:</label><br>
                 <select name="dog_size">
                     <option value="small_600">SMALL (P600)</option>
                     <option value="medium_850">MEDIUM (P850)</option>
@@ -64,6 +75,7 @@
 
                 <label><input type="radio" name="service" value="dog_cut_body&Head"> FG + Summer Cut Body Round Head</label><br>
 
+                <label for="dog_size">Pet Size:</label><br>
                 <select name="dog_size">
                     <option value="small_650">SMALL (P650)</option>
                     <option value="medium_800">MEDIUM (P800)</option>
@@ -72,10 +84,12 @@
 
                 <br><br>
 
-                <h3>CAT GROOMING PACKAGE</h3>
+                <h2>CAT GROOMING PACKAGE</h2>
 
                 <label><input type="radio" name="service" value="basic_cat_grooming"> Cat Grooming Basic</label>
                 <br>
+
+                <label for="dog_size">Pet Size:</label><br>
                 <select name="size_cat_groom_basic">
                     <option value="small_650">SMALL (P650)</option>
                     <option value="large_750">LARGE (P750)</option>
@@ -83,7 +97,7 @@
 
                 <br><br>
 
-                <h3>ADD-ONS</h3>
+                <h2>ADD-ONS</h2>
                 <label><input type="checkbox" name="dematting" value="100"> Dematting (P100)</label><br>
                 <label><input type="checkbox" name="degreasing" value="100"> Extra Degreasing (P100)</label>
 
@@ -94,25 +108,30 @@
                 <h2>DATE & TIME</h2>
 
                 <hr>
-
-                <label>Select Date:</label>
-                <input type="date" name="date">
-
-                <br><br>
-
-                <label>Select Time:</label>
-                <select name="time">
-                    <option value="08:30">8:30 AM</option>
-                    <option value="09:30">9:30 AM</option>
-                    <option value="12:00">12:00 PM</option>
-                    <option value="13:00">1:00 PM</option>
-                    <option value="14:00">2:00 PM</option>
-                    <option value="16:00">4:00 PM</option>
-                </select>
-
-                <!-- These are just sample time slots they are temp and can be cganged later -->
-
             </div>
+
+
+
+
+            <!-- FOR GAB CHANGE THIS TO YOUR LIKING (CALENDAR HTML). -->
+            <div class="calendar-container">
+
+                
+                <input type="text" id="selected_date" readonly placeholder="Select a date">    <!-- shows the user which date they clicked on -->
+
+                <div id="calendar"></div>   <!-- this is (calendar grid .js) -->
+
+                
+                <div id="time_slots">   <!-- Available time slots container -->
+
+
+
+                </div>
+            </div>
+            <!-- FOR GAB CHANGE THIS TO YOUR LIKING (CALENDAR HTML). -->
+
+
+
 
             <br><br>
             <hr>
@@ -162,18 +181,43 @@
             <br><br>
             <hr>
 
+
             
-            <div class="summary_receipt">
-                <h2>RECEIPT</h2>
-                <hr>
-                <button class="submit" onclick="confirm()">Confirm Booking</button>
+             <!-- FOR GAB CHANGE THIS TO YOUR LIKING (RECEIPT HTML). -->
+            <div id="receiptPopup" class="receipt-modal hidden"> <!-- hidden by default; JS will show it when a booking is confirmed. -->
+
+                <div class="receipt_content">
+
+                  <h2>BOOKING SUMMARY</h2>
+
+                 <div id="receipt_details">
+
+
+                 </div>
+
+                 <button onclick="closeReceipt()">Close</button>
+
+                </div>
             </div>
+
+            
+            <script src="script.js"></script>
+            <!-- FOR GAB CHANGE THIS TO YOUR LIKING (RECEIPT HTML). -->
 
         </div> 
 
     </main>
 
     
+
+
+
+
+
+
+
+
+
     <div class="footer">
         <div class="footer_menu">
             <div><a href="services.html">SERVICES</a></div>
