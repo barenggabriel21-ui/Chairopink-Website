@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChairoPink Pet Salon — Booking</title>
     <link rel="stylesheet" href="style.css">
+    <script src="integration/main.js"></script>
 </head>
 
 <body>
@@ -48,52 +49,62 @@
 
             <div class="services">
 
-                <label><input type="radio" name="service" value="basic_dog_fg"> Full Groom + Basic Trim, Dry & Sanitary</label><br>
-                <label><input type="radio" name="service" value="dog_shaved_fg"> FG + Fully Shaved</label><br>
+                <!-- Group 1: Basic packages (P550/P750/P950) -->
+                <div class="service-group">
+                    <label><input type="radio" name="service" value="basic_dog_fg" data-size-group="group1"> Full Groom + Basic Trim, Dry & Sanitary</label><br>
+                    <label><input type="radio" name="service" value="dog_shaved_fg" data-size-group="group1"> FG + Fully Shaved</label><br>
 
-                <label for="dog_size">Pet Size:</label><br>
-                <select name="dog_size">
-                    <option value="small_550">SMALL (P550)</option>
-                    <option value="medium_750">MEDIUM (P750)</option>
-                    <option value="large_950">LARGE (P950)</option>
-                </select>
-
-                <br><br>
-
-                <label><input type="radio" name="service" value="body_head_shaved&style"> FG + Body Shaved + Head Style</label><br>
-                <label><input type="radio" name="service" value="semi_shaved"> FG + Semi-Shaved</label><br>
-                <label><input type="radio" name="service" value="dog_summer_cut"> FG + Summer Cut</label><br>
-
-                <label for="dog_size">Pet Size:</label><br>
-                <select name="dog_size">
-                    <option value="small_600">SMALL (P600)</option>
-                    <option value="medium_850">MEDIUM (P850)</option>
-                    <option value="large_1000">LARGE (P1000)</option>
-                </select>
+                    <label for="size_group1">Pet Size:</label><br>
+                    <select id="size_group1" name="dog_size" class="size-group1">
+                        <option value="small_550">SMALL (P550)</option>
+                        <option value="medium_750">MEDIUM (P750)</option>
+                        <option value="large_950">LARGE (P950)</option>
+                    </select>
+                </div>
 
                 <br><br>
 
-                <label><input type="radio" name="service" value="dog_cut_body&Head"> FG + Summer Cut Body Round Head</label><br>
+                <!-- Group 2: Mid-tier packages (P600/P850/P1000) -->
+                <div class="service-group">
+                    <label><input type="radio" name="service" value="body_head_shaved&style" data-size-group="group2"> FG + Body Shaved + Head Style</label><br>
+                    <label><input type="radio" name="service" value="semi_shaved" data-size-group="group2"> FG + Semi-Shaved</label><br>
+                    <label><input type="radio" name="service" value="dog_summer_cut" data-size-group="group2"> FG + Summer Cut</label><br>
 
-                <label for="dog_size">Pet Size:</label><br>
-                <select name="dog_size">
-                    <option value="small_650">SMALL (P650)</option>
-                    <option value="medium_800">MEDIUM (P800)</option>
-                    <option value="large_1250">LARGE (P1250)</option>
-                </select>
+                    <label for="size_group2">Pet Size:</label><br>
+                    <select id="size_group2" name="dog_size" class="size-group2">
+                        <option value="small_600">SMALL (P600)</option>
+                        <option value="medium_850">MEDIUM (P850)</option>
+                        <option value="large_1000">LARGE (P1000)</option>
+                    </select>
+                </div>
+
+                <br><br>
+
+                <!-- Group 3: Premium package (P650/P800/P1250) -->
+                <div class="service-group">
+                    <label><input type="radio" name="service" value="dog_cut_body&Head" data-size-group="group3"> FG + Summer Cut Body Round Head</label><br>
+
+                    <label for="size_group3">Pet Size:</label><br>
+                    <select id="size_group3" name="dog_size" class="size-group3">
+                        <option value="small_650">SMALL (P650)</option>
+                        <option value="medium_800">MEDIUM (P800)</option>
+                        <option value="large_1250">LARGE (P1250)</option>
+                    </select>
+                </div>
 
                 <br><br>
 
                 <h2>CAT GROOMING PACKAGE</h2>
 
-                <label><input type="radio" name="service" value="basic_cat_grooming"> Cat Grooming Basic</label>
-                <br>
+                <div class="service-group">
+                    <label><input type="radio" name="service" value="basic_cat_grooming" data-size-group="cat"> Cat Grooming Basic</label><br>
 
-                <label for="dog_size">Pet Size:</label><br>
-                <select name="size_cat_groom_basic">
-                    <option value="small_650">SMALL (P650)</option>
-                    <option value="large_750">LARGE (P750)</option>
-                </select>
+                    <label for="size_cat_groom_basic">Pet Size:</label><br>
+                    <select id="size_cat_groom_basic" name="size_cat_groom_basic">
+                        <option value="small_650">SMALL (P650)</option>
+                        <option value="large_750">LARGE (P750)</option>
+                    </select>
+                </div>
 
                 <br><br>
 
@@ -147,8 +158,8 @@
 
                 <label>Pet Gender: </label>
                 <select name="gender">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
                 </select>
 
                 <br><br>
@@ -195,7 +206,6 @@
 
                  </div>
 
-                 <button onclick="closeReceipt()">Close</button>
 
                 </div>
             </div>
