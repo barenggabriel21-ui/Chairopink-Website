@@ -306,3 +306,97 @@ h2 {
     background: none;
 }
 
+/* Fully booked dates */
+.calendar-day.fully-booked {
+    background-color: #e0e0e0;
+    color: #888888; 
+    cursor: not-allowed; 
+}
+
+/* Past dates */
+.calendar-day.past-date {
+    background-color: #f5f5f5; 
+    color: #bbbbbb; 
+    cursor: not-allowed;
+}
+
+/* Selected date */
+.calendar-day.selected-date {
+    border: 2px solid #b671b6ff;
+    background-color: #f3e0f5; 
+}
+
+.fully-booked {
+    background-color: #ccc !important;
+    color: #888;
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
+/* Container for time slots */
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Each time slot */
+.time-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+/* Hover effect for available slots */
+.time-slot:hover {
+    background-color: #dcbfb9; /* matches your theme */
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Checked slot (selected) */
+.time-slot input[type="radio"]:checked + span {
+    background-color: #baada9;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+
+/* Hide the actual radio button */
+.time-slot input[type="radio"] {
+    display: none;
+}
+
+/* Booked slots */
+.time-slot.booked {
+    background-color: #ccc;
+    color: #777;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+/* Optional booked label */
+.booked-label {
+    font-size: 0.8em;
+    color: #555;
+    position: absolute;
+    bottom: 4px;
+    right: 6px;
+}
+
+
+
+

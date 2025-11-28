@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChairoPink Pet Salon — Booking</title>
     <link rel="stylesheet" href="style.css">
-    <script src="integration/main.js"></script>
 </head>
-
 <body>
 
-    
+    <!-- HEADER & LOGO -->
     <div class="header">
         <img src="images/CHAIRO_PINK_LOGO_(ORIGINAL).png" alt="chairopinkpetsalonlogo">
     </div>
 
-    
     <div class="logo">
         <ul>
             <li><a href="index.html">HOME</a></li>
@@ -25,34 +22,20 @@
         </ul>
     </div>
 
-    
-
-
-
-
-
-
-
-
-    
+    <!-- BOOKING FORM -->
     <main class="booking-page">
-
         <div class="booking-container">
 
             <hr>
-
-            <h1>SELECT SERVICES</h1 >
-
+            <h1>SELECT SERVICES</h1>
             <hr>
 
             <h2>DOG GROOMING PACKAGES</h2>
 
             <div class="services">
-
                 <div class="service-group">
                     <label><input type="radio" name="service" value="basic_dog_fg" data-size-group="group1"> Full Groom + Basic Trim, Dry & Sanitary</label><br>
                     <label><input type="radio" name="service" value="dog_shaved_fg" data-size-group="group1"> FG + Fully Shaved</label><br>
-
                     <label for="size_group1">Pet Size:</label><br>
                     <select id="size_group1" name="dog_size" class="size-group1">
                         <option value="small_550">SMALL (P550)</option>
@@ -67,7 +50,6 @@
                     <label><input type="radio" name="service" value="body_head_shaved&style" data-size-group="group2"> FG + Body Shaved + Head Style</label><br>
                     <label><input type="radio" name="service" value="semi_shaved" data-size-group="group2"> FG + Semi-Shaved</label><br>
                     <label><input type="radio" name="service" value="dog_summer_cut" data-size-group="group2"> FG + Summer Cut</label><br>
-
                     <label for="size_group2">Pet Size:</label><br>
                     <select id="size_group2" name="dog_size" class="size-group2">
                         <option value="small_600">SMALL (P600)</option>
@@ -80,7 +62,6 @@
 
                 <div class="service-group">
                     <label><input type="radio" name="service" value="dog_cut_body&Head" data-size-group="group3"> FG + Summer Cut Body Round Head</label><br>
-
                     <label for="size_group3">Pet Size:</label><br>
                     <select id="size_group3" name="dog_size" class="size-group3">
                         <option value="small_650">SMALL (P650)</option>
@@ -92,10 +73,8 @@
                 <br><br>
 
                 <h2>CAT GROOMING PACKAGE</h2>
-
                 <div class="service-group">
                     <label><input type="radio" name="service" value="basic_cat_grooming" data-size-group="cat"> Cat Grooming Basic</label><br>
-
                     <label for="size_cat_groom_basic">Pet Size:</label><br>
                     <select id="size_cat_groom_basic" name="size_cat_groom_basic">
                         <option value="small_650">SMALL (P650)</option>
@@ -112,115 +91,72 @@
                 <br><br>
 
                 <hr>
-
                 <h2>DATE & TIME</h2>
-
                 <hr>
-            </div>
 
-
-
-
-            <!-- FOR GAB CHANGE THIS TO YOUR LIKING (CALENDAR HTML). -->
-            <div class="calendar-container">
-
-                
-                <input type="text" id="selected_date" readonly placeholder="Select a date">    <!-- shows the user which date they clicked on -->
-
-                <div id="calendar"></div>   <!-- this is (calendar grid .js) -->
-
-                
-                <div id="time_slots">   <!-- Available time slots container -->
-
-
-
+                <div class="calendar-container">
+                    <input type="text" id="selected_date" readonly placeholder="Select a date">
+                    <div id="calendar"></div>
+                    <div id="time_slots"></div>
                 </div>
-            </div>
-            <!-- FOR GAB CHANGE THIS TO YOUR LIKING (CALENDAR HTML). -->
-
-
-
-
-            <br><br>
-            <hr>
-
-            
-            <div class="pet_info">
-                <h2>PET INFORMATION</h2>
-                <hr>
-
-                <input type="text" name="pet_name" placeholder="Pet Name"><br><br>
-                <input type="text" name="breed" placeholder="Breed"><br><br>
-                <input type="number" name="age" min="0" placeholder="Age"><br><br>
-
-                <label>Pet Gender: </label>
-                <select name="gender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
 
                 <br><br>
-
-                <label>Birthdate: </label>
-                <input type="date" name="birthdate"><br><br>
-
-                <input type="text" name="allergies" placeholder="Allergies"><br><br>
-
-                <label>Last Vaccination Date: </label>
-                <input type="date" name="last_vacc"><br><br>
-
-                <textarea name="health_history" rows="4" placeholder="Health History (injury, surgery, medications)"></textarea>
-            </div>
-
-            <br><br>
-            <hr>
-
-            
-            <div class="owner_info">
-                <h2>OWNER INFORMATION</h2>
                 <hr>
 
-                <input type="name" name="owner_name" placeholder="Owner Name"><br><br>
-                <input type="tel" name="contact_no" placeholder="Contact Number"><br><br>
-                <input type="email" name="email" placeholder="Email"><br><br>
-                <textarea name="address" rows="4" placeholder="Address"></textarea>
-            </div>
-
-            <br><br>
-            <hr>
-
-
-            
-             <!-- FOR GAB CHANGE THIS TO YOUR LIKING (RECEIPT HTML). -->
-            <div id="receiptPopup" class="receipt-modal hidden"> <!-- hidden by default; JS will show it when a booking is confirmed. -->
-
-                <div class="receipt_content">
-
-                  <h2>BOOKING SUMMARY</h2>
-
-                 <div id="receipt_details">
-
-
-                 </div>
-
-
+                <div class="pet_info">
+                    <h2>PET INFORMATION</h2>
+                    <hr>
+                    <input type="text" name="pet_name" placeholder="Pet Name"><br><br>
+                    <input type="text" name="breed" placeholder="Breed"><br><br>
+                    <input type="number" name="age" min="0" placeholder="Age"><br><br>
+                    <label>Pet Gender: </label>
+                    <select name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <br><br>
+                    <label>Birthdate: </label>
+                    <input type="date" name="birthdate"><br><br>
+                    <input type="text" name="allergies" placeholder="Allergies"><br><br>
+                    <label>Last Vaccination Date: </label>
+                    <input type="date" name="last_vacc"><br><br>
+                    <textarea name="health_history" rows="4" placeholder="Health History (injury, surgery, medications)"></textarea>
                 </div>
+
+                <br><br>
+                <hr>
+
+                <div class="owner_info">
+                    <h2>OWNER INFORMATION</h2>
+                    <hr>
+                    <input type="name" name="owner_name" placeholder="Owner Name"><br><br>
+                    <input type="tel" name="contact_no" placeholder="Contact Number"><br><br>
+                    <input type="email" name="email" placeholder="Email"><br><br>
+                    <textarea name="address" rows="4" placeholder="Address"></textarea>
+                </div>
+
+                <br><br>
+                <hr>
+
+                <div id="receiptPopup" class="receipt-modal hidden">
+                    <div class="receipt_content">
+                        <h2>BOOKING SUMMARY</h2>
+                        <div id="receipt_details"></div>
+                    </div>
+                </div>
+
             </div>
-
-            
-            <script src="script.js"></script>
-            <!-- FOR GAB CHANGE THIS TO YOUR LIKING (RECEIPT HTML). -->
-
-        </div> 
-
+        </div>
     </main>
 
-    
+    <div class="footer">
+        <!-- Keep your existing footer content -->
+    </div>
 
-
-
-
-
+    <!-- 🔥 Scripts -->
+    <script type="module" src="integration/firebase.js"></script>
+    <script type="module" src="integration/main.js"></script>
+    <script type="module" src="script.js"></script>
 
 
 
@@ -250,8 +186,12 @@
             </div>
             <img class="footer_logo" src="images/CHAIRO PINK LOGO (WHITE).png" alt="">
         </div>
-
     </div>
+
+    <!-- (no touch break logic big no no) -->
+    <script type="module" src="integration/firebase.js"></script>
+    <script type="module" src="integration/main.js"></script>
+    <script type="module" src="script.js"></script>
 
 </body>
 </html>
