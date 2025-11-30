@@ -138,7 +138,7 @@ ul li a:hover {
 /*footer css for all pages*/
 .footer2 {
     margin-bottom: -50px;
-    width: 144%;
+    width: 95.8%;
     background-color: #dcbfb9; /* Light dusty pink background */
     color: white;
     padding: 25px 40px;
@@ -454,35 +454,12 @@ h1 {
 }
 /*==End of FAQs Page Css Desisng==*/
 
-/*About Page Css Design*/
+/*==About Page Css Design==*/
 
 .page-wrapper {
-    width: 80%;
-    margin: 50px auto;
-    font-family: Arial;
-    color: #4a2c2a;
-}
-
-/* BREADCRUMB */
-.breadcrumb {
-    font-size: 14px;
-    margin-top: 10px;
-}
-.breadcrumb a {
-    text-decoration: none;
-    color: #d63f6a;
-}
-.arrow {
-    width: 10px;
-    margin: 0 5px;
-}
-
-.about-title {
-    text-align: center;
-    font-size: 32px;
-    color: #d63f6a;
-    margin-bottom: 25px;
-    font-family: 'Cairo', sans-serif;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .about-image-container {
@@ -490,39 +467,69 @@ h1 {
     text-align: center;
 }
 .about-image-container img {
-    width: 80%;
+    max-width: 80%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    margin-bottom: 30px;
+    margin: 30px auto 50px;
+    display: block;
+    margin-top: 150px;
+    margin-left: 425px;
 }
 
-.about-text, .section-text, .closing-text {
+.about-title {
     text-align: center;
-    line-height: 1.6;
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 36px;
+    color: #d63384;
+    margin: 40px 0 30px;
+    font-weight: bold;
 }
 
 .section-title {
-  text-align: center;
-  font-size: 24px;
-  color: #d63384;
-  margin: 30px 0 12px;
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin: 50px 0 20px;
+    font-weight: 600;
+    margin-left: 200px;
 }
 
+.about-content, .section-text, .closing-text {
+    max-width: 900px;
+    margin: 20px; 
+    text-align: center;
+    line-height: 1.6;
+    font-size: 20px;
+    color: #555;
+    margin-left: 600px
+}
+
+/*List*/
 .offer-list, .choose-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
     list-style: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px auto;
+    margin: 10px auto 10px;
+    max-width: 1000px;
 }
 
-.closing-text {
-    margin-top: 30px;
-    font-style: italic;
-    font-size: 20px;
+.offer-list li, .choose-list li {
+    flex-basis: 300px;
+    margin: 10px 15px;
+    padding: 10px;
+    text-align: center;;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #d63384;
+    font-weight: 500;
+    margin-left: 100px;
+    margin-right: -100px;
+}
+
+.check-list {
+    margin-left: 350px;
 }
 /*End About Page Css Design*/
