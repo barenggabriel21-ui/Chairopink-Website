@@ -217,7 +217,6 @@ ul li a:hover {
     margin-left: 600px
 }
 
-/*List*/
 .offer-list, .choose-list {
     display: flex;
     flex-wrap: wrap; 

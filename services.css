@@ -172,8 +172,21 @@ ul li a:hover {
 .border {
     margin: 50px auto 100px;
     max-width: 1500px;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
     border-radius: 12px;
     margin-top: 175px
+}
+
+main {
+    flex: 2;
+    min-width: 60%;
+}
+
+aside.side{
+    flex: 1;
+    min-width: 300px;
 }
 
 table {
@@ -227,8 +240,78 @@ td.price {
   margin-left: 10px;
 }
 
-.inclusions h2, .inclusions h3 {
-  color: #960826;
-  margin-bottom: 8px;
+.inclusions {
+  background-color: #fffafc;
+  border-left: 4px solid #d63384; 
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
+.inclusions h2 {
+  color: #960826;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.inclusions-inline p {
+    display: block;
+    line-height: 1.8;
+    color: #333;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.card.reminders {
+  background-color: #fff8f9; 
+  border: 2px dashed #d63384; 
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.card.reminders h3 {
+  color: #960826;
+  font-size: 20px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card.reminders ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 15px 0;
+  width: 100%; 
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.card.reminders ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.card.reminders .refusal-list li {
+    display: block;
+    padding-left: 28px;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.card ul li {
+    float: none; 
+    display: block;
+}
+
+.card.reminders p {
+  font-weight: 600;
+  color: #960826;
+  margin-top: 10px;
+}
+
 /*==End Services Page Css Design==*/
