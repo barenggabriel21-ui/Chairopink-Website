@@ -1,0 +1,225 @@
+/*HomePage or Overall Design*/
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+}
+
+.page-wrapper {
+  min-height: 100vh;          
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8e3df;
+    line-height: 26px;
+}
+.header {
+    width: 100%;
+    height: 100px;
+    background: rgb(35, 21, 18);
+    margin-bottom: -150px;
+    border-bottom: 5px solid #8c2e3e;
+}
+.header img{
+    width: 240px;
+    height: 70px;
+    margin-top: 14px;
+    margin-left: 10px;
+}
+
+ul {
+    float: right;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 150px;
+
+}
+
+ul li {
+    list-style: none;
+    margin-right: 0px;
+    margin-top: 84px;
+    font-size: 22px;
+    font-family: 'Arial', 'Helvetica Neue', 'Verdana', sans-serif;
+
+}
+
+ul li a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #960826;
+    transition: 0.3s;
+    font-family: 'Arial', 'Helvetica Neue', 'Verdana', sans-serif;
+}
+
+ul li a:hover {
+    color: white;
+}
+
+/*footer css for all pages*/
+.footer2 {
+    margin-bottom: -50px;
+    width: 95.8%;
+    background-color: #dcbfb9; 
+    color: white;
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    flex-wrap: wrap;
+}
+.footer {
+    background-color: #dcbfb9;
+    color: white;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    flex-wrap: wrap;
+}
+.footer_menu {
+    flex: 1;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.footer_menu div a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.footer_menu div a:hover {
+    text-decoration: underline;
+}
+
+.footer_menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Cairo', sans-serif;
+    opacity: 0.7;
+    text-align: left;
+    
+}
+
+.footer_loc {
+    flex: 1.5;
+    min-width: 280px;
+    color: white;
+    text-align: left;
+}
+
+.location {
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    text-transform: capitalize;
+}
+
+.location_details {
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.footer_icon {
+    flex: 1;
+    min-width: 180px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    
+}
+.social_media {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.social_media img {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+    transition: filter 0.3s ease;
+
+}
+
+.footer_logo {
+    width: 130px;
+    height: auto;
+    object-fit: contain;
+}
+/*End of Footer Css*/
+
+.content-wrapper {
+    max-width: 900px;
+    margin: 220px auto 100px auto;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-family: 'Cairo', sans-serif;
+    color: #960826;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #dcbfb9;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: 'Cairo', sans-serif;
+    color: #8c2e3e;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.content-wrapper p {
+    font-size: 20px;
+    color: #555555;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.content-wrapper h2:last-of-type {
+    color: #dc3545; 
+    font-weight: bold;
+    border: 2px solid #dc3545;
+    padding: 10px;
+    background-color: #ffeaea;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.content-wrapper p:nth-of-type(6) { 
+    font-style: italic;
+    font-weight: 500;
+    color: #960826;
+    margin-bottom: 30px;
+}
