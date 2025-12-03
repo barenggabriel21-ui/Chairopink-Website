@@ -121,6 +121,7 @@ function getDailyLimitByDateStr(dateStr) {
     // weekend (Sat/Sun) => 25, weekdays => 15
     return (day === 0 || day === 6) ? 25 : 15;
 }
+
 function getGroomersCountByDateStr(dateStr) {
     const day = new Date(dateStr).getDay();
     return (day === 0 || day === 6) ? 3 : 2;

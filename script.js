@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let bookedSlots = {};
     let dailyLimits = {};
     let defaultGroomingDuration = 90; // minutes
+    let bufferMinutes = 15; // 15-minute buffer between slots
 
     // --- Helpers ---
     function formatTime(hour, minute) {
@@ -38,16 +39,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function generateTimeSlots(duration = defaultGroomingDuration) {
         const slots = [];
-        let startHour = 9, startMinute = 30;
+        
+        // Total time per slot = grooming + buffer
+        const totalSlotTime = duration + bufferMinutes;
+        
+        let currentHour = 9, currentMinute = 30;
         const closingHour = 20, closingMinute = 0;
 
         while (true) {
+            let startHour = currentHour;
+            let startMinute = currentMinute;
+            
             let endHour = startHour + Math.floor((startMinute + duration) / 60);
             let endMinute = (startMinute + duration) % 60;
-            if (endHour > closingHour || (endHour === closingHour && endMinute > closingMinute)) break;
+            
+            // Check if the slot would go past closing time
+            if (endHour > closingHour || (endHour === closingHour && endMinute > closingMinute)) {
+                break;
+            }
+            
+            // Add the time slot (shows grooming time only)
             slots.push(`${formatTime(startHour, startMinute)} - ${formatTime(endHour, endMinute)}`);
-            startMinute += 30;
-            if (startMinute >= 60) { startHour += 1; startMinute -= 60; }
+            
+            // Move to next slot by adding total time (grooming + buffer)
+            currentMinute += totalSlotTime;
+            currentHour += Math.floor(currentMinute / 60);
+            currentMinute = currentMinute % 60;
         }
         return slots;
     }
@@ -173,15 +190,36 @@ document.addEventListener('DOMContentLoaded', function() {
         const maxGroomers = getGroomersCount(dateStr);
         const booked = bookedSlots[dateStr] || [];
 
-        let html = '<h3>Available Time Slots</h3><div class="time-slots-grid">';
+        let html = `<h3>Available Time Slots</h3>
+                    <div class="time-slots-grid">`;
+        
         allSlots.forEach(slot => {
             const count = booked.filter(s => s === slot).length;
-            if (count >= maxGroomers) return;
-            html += `<label class="time-slot">
-                        <input type="radio" name="time_slot" value="${slot}">
-                        <span>${slot}</span>
-                     </label>`;
+            const availableSpots = maxGroomers - count;
+            
+            if (count >= maxGroomers) {
+                // Slot is full
+                html += `<div class="time-slot ">
+                            <span>${slot}</span>
+                            <small class="status-badge full">FULL</small>
+                         </div>`;
+            } else if (availableSpots === 1) {
+                // Only 1 spot left
+                html += `<label class="time-slot ">
+                            <input type="radio" name="time_slot" value="${slot}">
+                            <span>${slot}</span>
+                            <small class="status-badge limited">1 SPOT LEFT</small>
+                         </label>`;
+            } else {
+                // Both spots available
+                html += `<label class="time-slot ">
+                            <input type="radio" name="time_slot" value="${slot}">
+                            <span>${slot}</span>
+                            <small class="status-badge "></small>
+                         </label>`;
+            }
         });
+        
         html += '</div>';
         timeSlotsContainer.innerHTML = html;
         timeSlotsContainer.scrollIntoView({behavior:'smooth', block:'nearest'});
